@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="sr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ZaSto</title>
+    <script>
+      ;(function (location) {
+        var path = location.pathname + location.search
+        var encoded = path.replace(/&/g, '~and~')
+        location.replace(location.origin + '/?/' + encoded.slice(1) + location.hash)
+      })(window.location)
+    </script>
+  </head>
+  <body></body>
+</html>

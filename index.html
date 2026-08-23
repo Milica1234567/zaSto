@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="sr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="ZaSto — digitalni meni za vaš restoran." />
+    <title>ZaSto</title>
+    <script>
+      ;(function (location) {
+        if (location.search.startsWith('?/')) {
+          var decoded = location.search.slice(1).split('&').map(function (part) {
+            return part.replace(/~and~/g, '&')
+          }).join('?')
+          window.history.replaceState(null, '', decoded + location.hash)
+        }
+      })(window.location)
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

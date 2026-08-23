@@ -1,0 +1,8 @@
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; color: var(--color-text); font-family: var(--font-sans); line-height: 1.5; -webkit-font-smoothing: antialiased; }
+body, #root { min-width: 20rem; min-height: 100%; }
+img { display: block; max-width: 100%; }
+button, input, textarea, select { font: inherit; }
+h1, h2, h3, p { overflow-wrap: break-word; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; } }

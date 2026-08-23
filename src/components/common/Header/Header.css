@@ -1,0 +1,2 @@
+.site-header { width: min(70rem, calc(100% - 2rem)); margin: 0 auto; padding: 1.25rem 0; }
+.site-header a { color: var(--color-heading); font-size: 1.25rem; font-weight: 800; text-decoration: none; }

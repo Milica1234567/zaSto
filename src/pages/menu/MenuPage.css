@@ -1,0 +1,7 @@
+.menu-page { min-height: 100svh; background: var(--restaurant-background); color: var(--restaurant-text); }
+.menu-page__content { width: min(50rem, 100%); margin: 0 auto; padding-bottom: 4rem; }
+.menu-not-found { display: grid; min-height: 100svh; place-items: center; padding: 1.5rem; background: var(--color-surface); text-align: center; }
+.menu-not-found div { max-width: 30rem; }
+.menu-not-found div > p:first-child { color: var(--color-brand); font-weight: 800; letter-spacing: .15em; text-transform: uppercase; }
+.menu-not-found h1 { color: var(--color-heading); }
+.menu-not-found a { display: inline-block; margin-top: 1rem; color: var(--color-brand); font-weight: 700; }
