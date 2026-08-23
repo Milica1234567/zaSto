@@ -7,11 +7,20 @@
     <title>ZaSto</title>
     <script>
       ;(function (location) {
-        if (location.search.startsWith('?/')) {
-          var decoded = location.search.slice(1).split('&').map(function (part) {
-            return part.replace(/~and~/g, '&')
-          }).join('?')
-          window.history.replaceState(null, '', decoded + location.hash)
+        if (location.search[1] === '/') {
+          var restoredRoute = location.search
+            .slice(1)
+            .split('&')
+            .map(function (part) {
+              return part.replace(/~and~/g, '&')
+            })
+            .join('?')
+
+          window.history.replaceState(
+            null,
+            '',
+            location.pathname.slice(0, -1) + restoredRoute + location.hash,
+          )
         }
       })(window.location)
     </script>

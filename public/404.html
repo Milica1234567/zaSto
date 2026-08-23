@@ -6,9 +6,25 @@
     <title>ZaSto</title>
     <script>
       ;(function (location) {
-        var path = location.pathname + location.search
-        var encoded = path.replace(/&/g, '~and~')
-        location.replace(location.origin + '/?/' + encoded.slice(1) + location.hash)
+        // Keep the repository segment for a GitHub Pages project site.
+        var pathSegmentsToKeep = 1
+        var projectRoot = location.pathname
+          .split('/')
+          .slice(0, 1 + pathSegmentsToKeep)
+          .join('/')
+        var route = location.pathname
+          .slice(1)
+          .split('/')
+          .slice(pathSegmentsToKeep)
+          .join('/')
+          .replace(/&/g, '~and~')
+        var query = location.search
+          ? '&' + location.search.slice(1).replace(/&/g, '~and~')
+          : ''
+
+        location.replace(
+          location.origin + projectRoot + '/?/' + route + query + location.hash,
+        )
       })(window.location)
     </script>
   </head>
