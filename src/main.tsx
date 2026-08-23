@@ -7,7 +7,7 @@ import "./styles/globals.css";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    <BrowserRouter basename="/zaSto">
+    <BrowserRouter>
       <App />
     </BrowserRouter>
   </StrictMode>,
