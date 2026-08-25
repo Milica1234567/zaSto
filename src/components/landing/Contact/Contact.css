@@ -1,12 +1,12 @@
-.contact { scroll-margin-top: 4rem; padding: clamp(5rem, 10vw, 8rem) 0 3rem; overflow: hidden; background: #2e352d; color: #fffdf9; }
+.contact { scroll-margin-top: 4rem; padding: clamp(5rem, 10vw, 8rem) 0 3rem; overflow: hidden; background: var(--zasto-deep); color: var(--zasto-on-deep); }
 .contact__inner { width: min(var(--zasto-container), calc(100% - 2rem)); margin: 0 auto; }
 .contact__layout { display: grid; gap: 2.5rem; }
 .contact__heading { max-width: 39rem; }
-.contact__eyebrow { margin: 0 0 1rem; color: #d6bb89; font-size: .7rem; font-weight: 850; letter-spacing: .16em; text-transform: uppercase; }
-.contact__heading h2 { margin: 0; color: #fffdf9; font-family: var(--font-display); font-size: clamp(2.6rem, 11vw, 5.1rem); font-weight: 500; line-height: .98; letter-spacing: -.05em; }
-.contact__heading > p:last-child { max-width: 34rem; margin: 1.3rem 0 0; color: #cdd0c7; font-size: .95rem; line-height: 1.65; }
-.contact-card { position: relative; min-width: 0; padding: 1.5rem; border: 1px solid rgba(255,255,255,.14); border-radius: clamp(1rem, 3vw, 1.5rem); background: #f4efe5; color: var(--zasto-text); font-style: normal; }
-.contact-card::before { position: absolute; top: 0; left: 1.5rem; width: 3rem; height: 2px; background: #b9985f; content: ''; }
+.contact__eyebrow { margin: 0 0 1rem; color: var(--zasto-gold); font-size: .7rem; font-weight: 850; letter-spacing: .16em; text-transform: uppercase; }
+.contact__heading h2 { margin: 0; color: var(--zasto-on-deep); font-family: var(--font-display); font-size: clamp(2.6rem, 11vw, 5.1rem); font-weight: 500; line-height: .98; letter-spacing: -.05em; }
+.contact__heading > p:last-child { max-width: 34rem; margin: 1.3rem 0 0; color: var(--zasto-on-deep-muted); font-size: .95rem; line-height: 1.65; }
+.contact-card { position: relative; min-width: 0; padding: 1.5rem; border: 1px solid var(--zasto-border-strong); border-radius: clamp(1rem, 3vw, 1.5rem); background: var(--zasto-surface); color: var(--zasto-text); font-style: normal; }
+.contact-card::before { position: absolute; top: 0; left: 1.5rem; width: 3rem; height: 2px; background: var(--zasto-gold); content: ''; }
 .contact-card__intro > p { margin: 0; font-family: var(--font-display); font-size: 1.55rem; font-weight: 500; }
 .contact-card__intro > span { display: block; margin-top: .6rem; color: var(--zasto-muted); font-size: .78rem; line-height: 1.55; }
 .contact-card__details { display: grid; margin: 1.75rem 0 0; }
@@ -18,13 +18,13 @@
 .contact-card__actions { display: grid; gap: .7rem; margin-top: 1rem; }
 .contact-card__actions > a { display: inline-flex; width: 100%; min-height: 3.1rem; padding: .7rem 1rem; align-items: center; justify-content: center; gap: .65rem; border-radius: 999px; font-size: .8rem; font-weight: 800; text-align: center; text-decoration: none; transition: background-color 150ms ease, border-color 150ms ease, color 150ms ease, transform 150ms ease; }
 .contact-card__actions > a:hover { transform: translateY(-1px); }
-.contact-card__primary { border: 1px solid var(--zasto-accent); background: var(--zasto-accent); color: #fff; }
+.contact-card__primary { border: 1px solid var(--zasto-accent); background: var(--zasto-accent); color: var(--zasto-on-accent); }
 .contact-card__primary:hover { background: var(--zasto-accent-dark); }
 .contact-card__secondary { border: 1px solid var(--zasto-border-strong); color: var(--zasto-text); }
 .contact-card__secondary:hover { border-color: var(--zasto-accent); background: var(--zasto-surface); }
-.contact a:focus-visible { outline: 3px solid #d6bb89; outline-offset: 3px; }
-.contact__closing { display: flex; margin-top: clamp(5rem, 12vw, 9rem); padding-top: 2.5rem; border-top: 1px solid rgba(255,255,255,.14); flex-direction: column; color: #dfe1da; font-family: var(--font-display); font-size: clamp(2.1rem, 11vw, 5.25rem); font-weight: 500; line-height: 1.02; letter-spacing: -.045em; }
-.contact__closing strong { color: #d6bb89; font-weight: 500; }
+.contact a:focus-visible { outline: 3px solid var(--zasto-gold); outline-offset: 3px; }
+.contact__closing { display: flex; margin-top: clamp(5rem, 12vw, 9rem); padding-top: 2.5rem; border-top: 1px solid color-mix(in srgb, var(--zasto-on-deep) 14%, transparent); flex-direction: column; color: var(--zasto-on-deep-muted); font-family: var(--font-display); font-size: clamp(2.1rem, 11vw, 5.25rem); font-weight: 500; line-height: 1.02; letter-spacing: -.045em; }
+.contact__closing strong { color: var(--zasto-gold); font-weight: 500; }
 @media (min-width: 40rem) {
   .contact-card__actions { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }

@@ -20,10 +20,15 @@
 .phone-visual__accent { position: absolute; border-radius: 50%; }
 .phone-visual__accent--one { top: 8%; right: 0; width: 8rem; height: 8rem; background: #e8c8a5; opacity: .55; }
 .phone-visual__accent--two { bottom: 7%; left: .5rem; width: 5rem; height: 5rem; border: 1px solid #a9af8d; }
-.phone-visual__note { position: absolute; right: 0; bottom: 4.5rem; z-index: 3; display: flex; align-items: center; gap: .55rem; padding: .65rem .8rem; border: 1px solid rgba(47,43,38,.08); border-radius: .8rem; background: #fff; box-shadow: 0 12px 30px rgba(57,47,38,.12); }
-.phone-visual__note > span { display: grid; width: 1.6rem; height: 1.6rem; place-items: center; border-radius: 50%; background: #e6eddf; color: #38432f; font-weight: 800; }
+.phone-visual__note { position: absolute; right: 0; bottom: 4.5rem; z-index: 3; display: flex; align-items: center; gap: .55rem; padding: .65rem .8rem; border: 1px solid var(--zasto-border); border-radius: .8rem; background: var(--zasto-surface); box-shadow: 0 12px 30px var(--zasto-shadow-soft); color: var(--zasto-text); }
+.phone-visual__note > span { display: grid; width: 1.6rem; height: 1.6rem; place-items: center; border-radius: 50%; background: var(--zasto-sage); color: var(--zasto-sage-text); font-weight: 800; }
 .phone-visual__note div { display: grid; }
 .phone-visual__note strong { font-size: .65rem; }
-.phone-visual__note small { color: #777067; font-size: .5rem; }
+.phone-visual__note small { color: var(--zasto-muted); font-size: .5rem; }
 @media (max-width: 23rem) { .phone-visual { width: 19rem; max-width: 100%; padding-inline: 1.5rem; } .phone-mockup { width: 14rem; } .phone-visual__note { right: .25rem; bottom: 3.5rem; } }
 @media (min-width: 48rem) { .phone-visual { width: min(100%, 25rem); padding: 2rem 2.25rem 1.25rem; } .phone-mockup { width: min(17.5rem, 100%); } .phone-mockup__screen { min-height: 34rem; } }
+@media (prefers-color-scheme: dark) {
+  .phone-mockup { border-color: rgba(255,255,255,.18); box-shadow: 0 30px 70px rgba(0,0,0,.4), 0 5px 15px rgba(0,0,0,.24); }
+  .phone-visual__accent--one { opacity: .2; }
+  .phone-visual__accent--two { border-color: var(--zasto-border-strong); }
+}

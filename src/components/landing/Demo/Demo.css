@@ -321,3 +321,8 @@
     height: 31rem;
   }
 }
+@media (prefers-color-scheme: dark) {
+  .demo-preview { border-color: #101310; box-shadow: 0 30px 70px rgba(0,0,0,.42), 0 5px 16px rgba(0,0,0,.28); }
+  .landing-demo__showcase:hover .demo-preview { box-shadow: 0 34px 76px rgba(0,0,0,.48), 0 7px 18px rgba(0,0,0,.3); }
+  .landing-demo__orbit--two { opacity: .55; }
+}

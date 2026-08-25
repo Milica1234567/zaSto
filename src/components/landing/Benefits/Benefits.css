@@ -10,17 +10,17 @@
 .benefit h3 { margin: 0; color: var(--zasto-text); font-family: var(--font-display); font-size: clamp(1.75rem, 7vw, 2.55rem); font-weight: 500; letter-spacing: -.03em; text-transform: none; }
 .benefit p { max-width: 28rem; margin: .65rem 0 0; color: var(--zasto-muted); font-size: .9rem; line-height: 1.65; }
 .benefit--instant { background: var(--zasto-surface); }
-.benefit--current { background: #e8eadf; }
+.benefit--current { background: var(--zasto-tonal-sage); }
 .benefit__browser { display: flex; height: 2.6rem; margin-top: 1.5rem; padding: 0 .75rem; align-items: center; gap: .28rem; border: 1px solid var(--zasto-border); border-radius: .55rem; background: var(--zasto-bg); }
 .benefit__browser > span { width: .3rem; height: .3rem; border-radius: 50%; background: var(--zasto-border-strong); }
 .benefit__browser i { min-width: 0; margin-left: .35rem; overflow: hidden; color: var(--zasto-muted); font-size: .58rem; font-style: normal; text-overflow: ellipsis; white-space: nowrap; }
-.benefit__price { display: grid; grid-template-columns: 1fr auto; align-items: center; margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid rgba(37,39,33,.12); font-size: .72rem; }
+.benefit__price { display: grid; grid-template-columns: 1fr auto; align-items: center; margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid var(--zasto-border); font-size: .72rem; }
 .benefit__price span { grid-row: span 2; color: var(--zasto-text); font-weight: 750; }
 .benefit__price s { color: var(--zasto-muted); font-size: .62rem; }
 .benefit__price strong { color: var(--zasto-accent-dark); }
-.benefit--mobile { min-height: 24rem; padding-bottom: 0; background: #2e352d; }
-.benefit--mobile .benefit__top, .benefit--mobile h3 { color: #fffdf9; }
-.benefit--mobile p { color: #cdd0c7; }
+.benefit--mobile { min-height: 24rem; padding-bottom: 0; background: var(--zasto-deep); }
+.benefit--mobile .benefit__top, .benefit--mobile h3 { color: var(--zasto-on-deep); }
+.benefit--mobile p { color: var(--zasto-on-deep-muted); }
 .benefit__mobile-copy { position: relative; z-index: 2; }
 .benefit__mobile-copy h3 { margin-top: 2.5rem; }
 .benefit-phone { position: relative; width: 11rem; height: 12rem; margin: 2rem auto 0; padding: .42rem; overflow: hidden; border: 1px solid rgba(255,255,255,.3); border-bottom: 0; border-radius: 1.8rem 1.8rem 0 0; background: #171a17; }
