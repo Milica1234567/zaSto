@@ -1,7 +1,7 @@
-.phone-visual { position: relative; width: min(100%, 25rem); margin: 0 auto; padding: 1.5rem 2.25rem 1.25rem; }
-.phone-mockup { position: relative; z-index: 2; width: min(17.5rem, 100%); margin: 0 auto; padding: .48rem; border: 1px solid rgba(255,255,255,.45); border-radius: 2.7rem; background: #272821; box-shadow: 0 28px 60px rgba(57, 47, 38, .2), 0 4px 12px rgba(57, 47, 38, .12); transform: rotate(1.5deg); }
+.phone-visual { position: relative; width: min(100%, 22rem); margin: 0 auto; padding: .75rem 2rem 1rem; }
+.phone-mockup { position: relative; z-index: 2; width: min(15.5rem, 100%); margin: 0 auto; padding: .48rem; border: 1px solid rgba(255,255,255,.45); border-radius: 2.7rem; background: #272821; box-shadow: 0 28px 60px rgba(57, 47, 38, .2), 0 4px 12px rgba(57, 47, 38, .12); transform: rotate(1.5deg); }
 .phone-mockup__speaker { position: absolute; top: .85rem; left: 50%; z-index: 3; width: 3.5rem; height: .32rem; border-radius: 1rem; background: #272821; transform: translateX(-50%); }
-.phone-mockup__screen { min-height: 34rem; overflow: hidden; border-radius: 2.25rem; background: #fffaf2; color: #29231f; }
+.phone-mockup__screen { min-height: 29rem; overflow: hidden; border-radius: 2.25rem; background: #fffaf2; color: #29231f; }
 .phone-mockup__restaurant { padding: 2.2rem 1.25rem 1.15rem; text-align: center; }
 .phone-mockup__restaurant > span { color: #873f2d; font-size: .5rem; font-weight: 800; letter-spacing: .17em; text-transform: uppercase; }
 .phone-mockup__mark { display: grid; width: 2.5rem; height: 2.5rem; margin: .55rem auto .4rem; place-items: center; border-radius: 50%; background: #873f2d; color: #fffaf2; font-family: Georgia, serif; font-size: 1.25rem; }
@@ -25,5 +25,5 @@
 .phone-visual__note div { display: grid; }
 .phone-visual__note strong { font-size: .65rem; }
 .phone-visual__note small { color: #777067; font-size: .5rem; }
-@media (max-width: 23rem) { .phone-visual { padding-inline: 1rem; } .phone-visual__note { right: .25rem; } }
-@media (min-width: 48rem) { .phone-visual { padding-block: 2rem; } }
+@media (max-width: 23rem) { .phone-visual { width: 19rem; max-width: 100%; padding-inline: 1.5rem; } .phone-mockup { width: 14rem; } .phone-visual__note { right: .25rem; bottom: 3.5rem; } }
+@media (min-width: 48rem) { .phone-visual { width: min(100%, 25rem); padding: 2rem 2.25rem 1.25rem; } .phone-mockup { width: min(17.5rem, 100%); } .phone-mockup__screen { min-height: 34rem; } }

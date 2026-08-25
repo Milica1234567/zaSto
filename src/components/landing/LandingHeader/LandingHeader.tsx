@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import logo from '../../../assets/images/logo.png'
+import smallLogo from '../../../assets/images/logosmall.png'
 import './LandingHeader.css'
 
 const navigation = [
@@ -36,7 +37,8 @@ export function LandingHeader() {
   return <header className={`landing-header${scrolled ? ' landing-header--scrolled' : ''}`}>
     <div className="landing-header__inner">
       <Link className="landing-header__logo" to="/" aria-label="ZaSto početna" onClick={closeMenu}>
-        <img src={logo} alt="ZaSto" />
+        <img className="landing-header__logo-small" src={smallLogo} alt="ZaSto" />
+        <img className="landing-header__logo-full" src={logo} alt="" />
       </Link>
 
       <nav className="landing-header__desktop-nav" aria-label="Glavna navigacija">
