@@ -1,0 +1,47 @@
+.contact { scroll-margin-top: 4rem; padding: clamp(5rem, 10vw, 8rem) 0 3rem; overflow: hidden; background: #2e352d; color: #fffdf9; }
+.contact__inner { width: min(var(--zasto-container), calc(100% - 2rem)); margin: 0 auto; }
+.contact__layout { display: grid; gap: 2.5rem; }
+.contact__heading { max-width: 39rem; }
+.contact__eyebrow { margin: 0 0 1rem; color: #d6bb89; font-size: .7rem; font-weight: 850; letter-spacing: .16em; text-transform: uppercase; }
+.contact__heading h2 { margin: 0; color: #fffdf9; font-family: var(--font-display); font-size: clamp(2.6rem, 11vw, 5.1rem); font-weight: 500; line-height: .98; letter-spacing: -.05em; }
+.contact__heading > p:last-child { max-width: 34rem; margin: 1.3rem 0 0; color: #cdd0c7; font-size: .95rem; line-height: 1.65; }
+.contact-card { position: relative; min-width: 0; padding: 1.5rem; border: 1px solid rgba(255,255,255,.14); border-radius: clamp(1rem, 3vw, 1.5rem); background: #f4efe5; color: var(--zasto-text); font-style: normal; }
+.contact-card::before { position: absolute; top: 0; left: 1.5rem; width: 3rem; height: 2px; background: #b9985f; content: ''; }
+.contact-card__intro > p { margin: 0; font-family: var(--font-display); font-size: 1.55rem; font-weight: 500; }
+.contact-card__intro > span { display: block; margin-top: .6rem; color: var(--zasto-muted); font-size: .78rem; line-height: 1.55; }
+.contact-card__details { display: grid; margin: 1.75rem 0 0; }
+.contact-card__details > div { padding: 1rem 0; border-top: 1px solid var(--zasto-border-strong); }
+.contact-card__details dt { color: var(--zasto-muted); font-size: .65rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; }
+.contact-card__details dd { min-width: 0; margin: .3rem 0 0; }
+.contact-card__details a { color: var(--zasto-text); font-size: clamp(.95rem, 4.5vw, 1.2rem); font-weight: 750; text-decoration-color: color-mix(in srgb, var(--zasto-accent) 45%, transparent); text-underline-offset: .22em; overflow-wrap: anywhere; }
+.contact-card__details a:hover { color: var(--zasto-accent-dark); }
+.contact-card__actions { display: grid; gap: .7rem; margin-top: 1rem; }
+.contact-card__actions > a { display: inline-flex; width: 100%; min-height: 3.1rem; padding: .7rem 1rem; align-items: center; justify-content: center; gap: .65rem; border-radius: 999px; font-size: .8rem; font-weight: 800; text-align: center; text-decoration: none; transition: background-color 150ms ease, border-color 150ms ease, color 150ms ease, transform 150ms ease; }
+.contact-card__actions > a:hover { transform: translateY(-1px); }
+.contact-card__primary { border: 1px solid var(--zasto-accent); background: var(--zasto-accent); color: #fff; }
+.contact-card__primary:hover { background: var(--zasto-accent-dark); }
+.contact-card__secondary { border: 1px solid var(--zasto-border-strong); color: var(--zasto-text); }
+.contact-card__secondary:hover { border-color: var(--zasto-accent); background: var(--zasto-surface); }
+.contact a:focus-visible { outline: 3px solid #d6bb89; outline-offset: 3px; }
+.contact__closing { display: flex; margin-top: clamp(5rem, 12vw, 9rem); padding-top: 2.5rem; border-top: 1px solid rgba(255,255,255,.14); flex-direction: column; color: #dfe1da; font-family: var(--font-display); font-size: clamp(2.1rem, 11vw, 5.25rem); font-weight: 500; line-height: 1.02; letter-spacing: -.045em; }
+.contact__closing strong { color: #d6bb89; font-weight: 500; }
+@media (min-width: 40rem) {
+  .contact-card__actions { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (min-width: 48rem) {
+  .contact { scroll-margin-top: 4.8rem; padding-bottom: 4rem; }
+  .contact__layout { grid-template-columns: minmax(0, 1.05fr) minmax(20rem, .75fr); align-items: start; gap: clamp(3rem, 8vw, 8rem); }
+  .contact-card { padding: clamp(2rem, 4vw, 2.75rem); }
+  .contact-card::before { left: clamp(2rem, 4vw, 2.75rem); }
+  .contact-card__actions { grid-template-columns: 1fr; }
+  .contact__closing { display: block; }
+  .contact__closing span, .contact__closing strong { display: inline; }
+}
+@media (min-width: 70rem) {
+  .contact-card__actions { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 23rem) {
+  .contact-card { padding-inline: 1.1rem; }
+  .contact__heading h2 { font-size: 2.45rem; }
+  .contact__closing { font-size: 2rem; }
+}
