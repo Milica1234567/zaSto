@@ -1,5 +1,2 @@
-.landing-page { display: flex; min-height: 100svh; flex-direction: column; background: var(--color-surface); }
-.landing-placeholder { width: min(46rem, calc(100% - 2rem)); margin: auto; padding: 5rem 0; text-align: center; }
-.landing-placeholder__brand { margin: 0 0 1rem; color: var(--color-brand); font-weight: 800; letter-spacing: .18em; text-transform: uppercase; }
-.landing-placeholder h1 { max-width: 12ch; margin: 0 auto; color: var(--color-heading); font-size: clamp(2.5rem, 8vw, 5rem); line-height: 1.02; letter-spacing: -.05em; }
-.landing-placeholder > p:not(.landing-placeholder__brand) { max-width: 38rem; margin: 1.5rem auto 2rem; color: var(--color-muted); font-size: 1.1rem; }
+.landing-page { display: flex; min-height: 100svh; flex-direction: column; background: var(--zasto-bg); }
+.landing-page main { flex: 1; }
