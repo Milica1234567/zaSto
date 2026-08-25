@@ -2,11 +2,11 @@
 .landing-hero::before { position: absolute; inset: auto auto 8% -7rem; width: 15rem; height: 15rem; border: 1px solid color-mix(in srgb, var(--zasto-accent) 16%, transparent); border-radius: 50%; content: ''; }
 .landing-hero__inner { position: relative; display: grid; width: min(var(--zasto-container), calc(100% - 2rem)); min-height: calc(100svh - 4rem); margin: 0 auto; padding: 2.75rem 0 2.5rem; align-items: center; gap: 2.5rem; }
 .landing-hero__copy { position: relative; z-index: 2; }
-.landing-hero__eyebrow { display: flex; align-items: center; gap: .55rem; margin: 0 0 1.2rem; color: var(--zasto-accent-dark); font-size: .72rem; font-weight: 800; letter-spacing: .11em; text-transform: uppercase; }
+.landing-hero__eyebrow { display: flex; align-items: center; gap: .55rem; margin: 0 0 1.2rem; color: var(--zasto-accent-light); font-size: .72rem; font-weight: 800; letter-spacing: .11em; text-transform: uppercase; }
 .landing-hero__eyebrow span { width: 1.6rem; height: 1px; background: var(--zasto-accent); }
 .landing-hero h1 { margin: 0; color: var(--zasto-text); font-family: var(--font-display); font-size: clamp(2rem, 10vw, 2.75rem); font-weight: 500; line-height: 1; letter-spacing: -.05em; }
 .landing-hero h1 span, .landing-hero h1 em { display: block; white-space: nowrap; }
-.landing-hero h1 em { color: var(--zasto-accent); font-style: italic; font-weight: 500; }
+.landing-hero h1 em { color: var(--zasto-accent-light); font-style: italic; font-weight: 500; }
 .landing-hero__intro { max-width: 34rem; margin: 1.35rem 0 0; color: var(--zasto-muted); font-size: 1rem; line-height: 1.65; }
 .landing-hero__actions { display: flex; align-items: stretch; flex-direction: column; gap: .7rem; margin-top: 1.65rem; }
 .landing-hero__actions a { display: inline-flex; min-height: 3.15rem; align-items: center; justify-content: center; padding: 0 1.3rem; border-radius: 999px; font-size: .92rem; font-weight: 750; text-decoration: none; transition: background-color 150ms ease, border-color 150ms ease, transform 150ms ease; }

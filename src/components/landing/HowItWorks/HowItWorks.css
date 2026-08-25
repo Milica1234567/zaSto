@@ -1,6 +1,6 @@
-.how-it-works { scroll-margin-top: 4rem; padding: clamp(5rem, 10vw, 8rem) 0; background: var(--zasto-surface); }
+.how-it-works { scroll-margin-top: 4rem; padding: clamp(5rem, 10vw, 8rem) 0; background: var(--zasto-background-alt); }
 .how-it-works__inner { width: min(var(--zasto-container), calc(100% - 2rem)); margin: 0 auto; }
-.section-heading__eyebrow { margin: 0 0 1rem; color: var(--zasto-accent); font-size: .7rem; font-weight: 850; letter-spacing: .16em; text-transform: uppercase; }
+.section-heading__eyebrow { margin: 0 0 1rem; color: var(--zasto-accent-light); font-size: .7rem; font-weight: 850; letter-spacing: .16em; text-transform: uppercase; }
 .section-heading h2 { margin: 0; color: var(--zasto-text); font-family: var(--font-display); font-size: clamp(2.35rem, 9vw, 4.5rem); font-weight: 500; line-height: 1.02; letter-spacing: -.045em; }
 .section-heading > p:last-child { margin: 1.1rem 0 0; color: var(--zasto-muted); font-size: .92rem; }
 .how-it-works__heading { max-width: 46rem; }
@@ -9,7 +9,7 @@
 .process-step:last-child { padding-bottom: 0; }
 .process-step::before { position: absolute; top: 2rem; bottom: 0; left: 1.15rem; width: 1px; background: var(--zasto-border-strong); content: ''; }
 .process-step:last-child::before { display: none; }
-.process-step__number { position: relative; z-index: 1; display: grid; width: 2.4rem; height: 2.4rem; place-items: center; border: 1px solid var(--zasto-border-strong); border-radius: 50%; background: var(--zasto-surface); color: var(--zasto-accent-dark); font-size: .67rem; font-weight: 850; letter-spacing: .08em; }
+.process-step__number { position: relative; z-index: 1; display: grid; width: 2.4rem; height: 2.4rem; place-items: center; border: 1px solid var(--zasto-border-strong); border-radius: 50%; background: var(--zasto-surface); color: var(--zasto-accent-light); font-size: .67rem; font-weight: 850; letter-spacing: .08em; }
 .process-step__visual, .process-step__copy { grid-column: 2; }
 .process-step__visual { display: grid; width: 7.25rem; height: 7.25rem; margin: .35rem 0 1.2rem; place-items: center; border-radius: 50%; background: var(--zasto-bg); }
 .process-step__copy h3 { margin: 0; color: var(--zasto-text); font-family: var(--font-display); font-size: 1.55rem; font-weight: 500; }
@@ -21,11 +21,11 @@
 .process-visual--qr span:nth-child(3n), .process-visual--qr span:nth-child(7), .process-visual--qr span:nth-child(10) { opacity: .18; }
 .process-visual--phone { width: 2.9rem; height: 4.8rem; padding: .65rem .48rem; border: 1.5px solid currentColor; border-radius: .65rem; }
 .process-visual--phone span { position: absolute; top: .3rem; left: 50%; width: .75rem; height: .1rem; border-radius: 1rem; background: currentColor; transform: translateX(-50%); }
-.process-visual--phone i { display: block; height: .35rem; margin-top: .45rem; border-radius: 1rem; background: var(--zasto-accent); opacity: .72; }
+.process-visual--phone i { display: block; height: .35rem; margin-top: .45rem; border-radius: 1rem; background: var(--zasto-accent-light); opacity: .72; }
 .process-visual--phone i:nth-of-type(2) { width: 70%; background: currentColor; opacity: .22; }
 .process-visual--menu { display: grid; width: 4.3rem; height: 3.8rem; align-content: center; gap: .5rem; }
 .process-visual--menu span, .process-visual--menu i { display: block; height: .38rem; border-radius: 1rem; background: currentColor; }
-.process-visual--menu span { width: 58%; height: .5rem; background: var(--zasto-accent); }
+.process-visual--menu span { width: 58%; height: .5rem; background: var(--zasto-accent-light); }
 .process-visual--menu i { position: relative; opacity: .22; }
 .process-visual--menu i::after { position: absolute; top: 0; right: 0; width: .8rem; height: 100%; border-radius: inherit; background: currentColor; content: ''; opacity: 1; }
 @media (min-width: 48rem) {
@@ -36,5 +36,5 @@
   .process-step__number { display: block; width: auto; height: auto; border: 0; background: transparent; color: var(--zasto-muted); font-size: .68rem; }
   .process-step__visual { width: 8.5rem; height: 8.5rem; margin: 1.25rem 0 1.7rem; }
   .process-step__connector { position: absolute; top: 5.1rem; right: clamp(.5rem, 2vw, 1.5rem); display: block; width: calc(100% - 11rem); height: 1px; background: var(--zasto-border-strong); }
-  .process-step__connector i { position: absolute; top: 50%; right: -.15rem; padding-left: .35rem; background: var(--zasto-surface); color: var(--zasto-muted); font-size: .78rem; font-style: normal; transform: translateY(-52%); }
+  .process-step__connector i { position: absolute; top: 50%; right: -.15rem; padding-left: .35rem; background: var(--zasto-background-alt); color: var(--zasto-muted); font-size: .78rem; font-style: normal; transform: translateY(-52%); }
 }

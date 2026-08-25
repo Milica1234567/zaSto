@@ -6,12 +6,18 @@
   --zasto-muted: #6d6c64;
   --zasto-accent: #a64f36;
   --zasto-accent-dark: #843b28;
+  --zasto-accent-light: #a64f36;
   --zasto-sage: #dfe6d7;
   --zasto-border: #e5dfd5;
   --zasto-border-strong: #cec5b8;
   --zasto-tonal-sage: #e8eadf;
   --zasto-deep: #2e352d;
-  --zasto-deep-strong: #171a17;
+  --zasto-deep-strong: #2e352d;
+  --zasto-background-alt: #fffdf9;
+  --zasto-card: #fffdf9;
+  --zasto-surface-elevated: #f8f5ef;
+  --zasto-footer-bg: #f8f5ef;
+  --zasto-footer-border: transparent;
   --zasto-on-deep: #fffdf9;
   --zasto-on-deep-muted: #cdd0c7;
   --zasto-gold: #d6bb89;
@@ -34,25 +40,31 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --zasto-bg: #1b201b;
-    --zasto-surface: #242a23;
-    --zasto-text: #f0eadf;
-    --zasto-muted: #b8b3a8;
-    --zasto-accent: #d08b70;
-    --zasto-accent-dark: #bd7256;
-    --zasto-sage: #3b483a;
-    --zasto-border: #363d35;
-    --zasto-border-strong: #4b5449;
-    --zasto-tonal-sage: #2c352c;
-    --zasto-deep: #121713;
-    --zasto-deep-strong: #0e120f;
-    --zasto-on-deep: #f5efe4;
-    --zasto-on-deep-muted: #bbbdb5;
-    --zasto-gold: #d2b477;
-    --zasto-on-accent: #191c18;
-    --zasto-sage-text: #e4eadf;
-    --zasto-shadow-soft: rgba(0, 0, 0, .22);
-    --zasto-shadow-raised: rgba(0, 0, 0, .38);
-    --color-text: #ddd8ce;
+    --zasto-bg: #201d18;
+    --zasto-background-alt: #252119;
+    --zasto-surface: #29251f;
+    --zasto-card: #2b2720;
+    --zasto-surface-elevated: #332e26;
+    --zasto-footer-bg: #27231c;
+    --zasto-footer-border: #433d33;
+    --zasto-text: #f3eee5;
+    --zasto-muted: #c2baae;
+    --zasto-accent: #b3573c;
+    --zasto-accent-dark: #98472f;
+    --zasto-accent-light: #d58b70;
+    --zasto-sage: #3d4a3a;
+    --zasto-border: #433d33;
+    --zasto-border-strong: #5a5143;
+    --zasto-tonal-sage: #2c3529;
+    --zasto-deep: #1c281c;
+    --zasto-deep-strong: #172118;
+    --zasto-on-deep: #f5f0e7;
+    --zasto-on-deep-muted: #c8c3b8;
+    --zasto-gold: #cfb276;
+    --zasto-on-accent: #fff8f1;
+    --zasto-sage-text: #e8eee3;
+    --zasto-shadow-soft: rgba(7, 5, 3, .2);
+    --zasto-shadow-raised: rgba(7, 5, 3, .34);
+    --color-text: #e2dcd2;
   }
 }
