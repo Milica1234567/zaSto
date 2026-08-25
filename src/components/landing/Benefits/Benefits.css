@@ -1,0 +1,41 @@
+.benefits { scroll-margin-top: 4rem; padding: clamp(5rem, 10vw, 8rem) 0; background: var(--zasto-bg); }
+.benefits__inner { width: min(var(--zasto-container), calc(100% - 2rem)); margin: 0 auto; }
+.benefits__heading { max-width: 51rem; }
+.benefits__heading .section-heading__eyebrow { margin: 0 0 1rem; color: var(--zasto-accent); font-size: .7rem; font-weight: 850; letter-spacing: .16em; text-transform: uppercase; }
+.benefits__heading h2 { margin: 0; color: var(--zasto-text); font-family: var(--font-display); font-size: clamp(2.35rem, 9vw, 4.5rem); font-weight: 500; line-height: 1.02; letter-spacing: -.045em; }
+.benefits__layout { display: grid; gap: 1rem; margin-top: clamp(3rem, 6vw, 4.5rem); }
+.benefit { position: relative; display: flex; min-width: 0; min-height: 20rem; overflow: hidden; padding: 1.5rem; border: 1px solid var(--zasto-border); border-radius: var(--zasto-radius); flex-direction: column; justify-content: space-between; }
+.benefit__top { display: flex; align-items: flex-start; justify-content: space-between; color: var(--zasto-muted); font-size: .67rem; font-weight: 850; letter-spacing: .1em; }
+.benefit__top i { color: var(--zasto-accent); font-size: .75rem; font-style: normal; letter-spacing: .05em; }
+.benefit h3 { margin: 0; color: var(--zasto-text); font-family: var(--font-display); font-size: clamp(1.75rem, 7vw, 2.55rem); font-weight: 500; letter-spacing: -.03em; text-transform: none; }
+.benefit p { max-width: 28rem; margin: .65rem 0 0; color: var(--zasto-muted); font-size: .9rem; line-height: 1.65; }
+.benefit--instant { background: var(--zasto-surface); }
+.benefit--current { background: #e8eadf; }
+.benefit__browser { display: flex; height: 2.6rem; margin-top: 1.5rem; padding: 0 .75rem; align-items: center; gap: .28rem; border: 1px solid var(--zasto-border); border-radius: .55rem; background: var(--zasto-bg); }
+.benefit__browser > span { width: .3rem; height: .3rem; border-radius: 50%; background: var(--zasto-border-strong); }
+.benefit__browser i { min-width: 0; margin-left: .35rem; overflow: hidden; color: var(--zasto-muted); font-size: .58rem; font-style: normal; text-overflow: ellipsis; white-space: nowrap; }
+.benefit__price { display: grid; grid-template-columns: 1fr auto; align-items: center; margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid rgba(37,39,33,.12); font-size: .72rem; }
+.benefit__price span { grid-row: span 2; color: var(--zasto-text); font-weight: 750; }
+.benefit__price s { color: var(--zasto-muted); font-size: .62rem; }
+.benefit__price strong { color: var(--zasto-accent-dark); }
+.benefit--mobile { min-height: 24rem; padding-bottom: 0; background: #2e352d; }
+.benefit--mobile .benefit__top, .benefit--mobile h3 { color: #fffdf9; }
+.benefit--mobile p { color: #cdd0c7; }
+.benefit__mobile-copy { position: relative; z-index: 2; }
+.benefit__mobile-copy h3 { margin-top: 2.5rem; }
+.benefit-phone { position: relative; width: 11rem; height: 12rem; margin: 2rem auto 0; padding: .42rem; overflow: hidden; border: 1px solid rgba(255,255,255,.3); border-bottom: 0; border-radius: 1.8rem 1.8rem 0 0; background: #171a17; }
+.benefit-phone::before { position: absolute; top: .75rem; left: 50%; z-index: 2; width: 2.5rem; height: .22rem; border-radius: 1rem; background: #171a17; content: ''; transform: translateX(-50%); }
+.benefit-phone__screen { height: 100%; padding: 2rem 1rem 1rem; border-radius: 1.4rem 1.4rem 0 0; background: #fffaf2; color: #29231f; text-align: center; }
+.benefit-phone__screen span { display: block; color: #873f2d; font-size: .45rem; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; }
+.benefit-phone__screen strong { display: block; margin: .35rem 0 1.1rem; color: #873f2d; font-family: var(--font-display); font-size: 1rem; }
+.benefit-phone__screen i { display: block; height: 1.25rem; margin-top: .55rem; border-bottom: 1px solid rgba(41,35,31,.12); }
+@media (min-width: 48rem) {
+  .benefits { scroll-margin-top: 4.8rem; }
+  .benefits__layout { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .benefit { min-height: 22rem; padding: clamp(1.75rem, 3vw, 2.5rem); }
+  .benefit--mobile { grid-column: 1 / -1; display: grid; min-height: 25rem; padding-bottom: 0; grid-template-columns: minmax(0, 1.2fr) minmax(15rem, .8fr); align-items: center; gap: 2rem; }
+  .benefit__mobile-copy { align-self: center; max-width: 37rem; }
+  .benefit__mobile-copy h3 { margin-top: 4rem; font-size: clamp(2.5rem, 5vw, 4rem); }
+  .benefit__mobile-copy p { font-size: 1rem; }
+  .benefit-phone { align-self: end; width: 15rem; height: 20rem; margin: 0 auto; }
+}
