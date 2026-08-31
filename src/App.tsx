@@ -1,4 +1,5 @@
 import { Route, Routes } from 'react-router-dom'
+import { AnalyticsPageView } from './components/common/AnalyticsPageView/AnalyticsPageView'
 import { RouteMetadata } from './components/common/RouteMetadata/RouteMetadata'
 import { ScrollToTop } from './components/common/ScrollToTop/ScrollToTop'
 import { LandingPage } from './pages/landing/LandingPage'
@@ -8,6 +9,7 @@ function App() {
   return (
     <>
       <RouteMetadata />
+      <AnalyticsPageView />
       <ScrollToTop />
       <Routes>
         <Route path="/" element={<LandingPage />} />

@@ -1,4 +1,5 @@
 import './Contact.css'
+import { trackEvent } from '../../../analytics/analytics'
 
 const email = 'zastomenu@gmail.com'
 const instagramUrl = 'https://www.instagram.com/zasto.menu/'
@@ -22,17 +23,17 @@ export function Contact() {
           <dl className="contact-card__details">
             <div>
               <dt>Email</dt>
-              <dd><a href={`mailto:${email}`}>{email}</a></dd>
+              <dd><a href={`mailto:${email}`} onClick={() => trackEvent('contact_email', { source_section: 'contact', cta_label: 'Email address' })}>{email}</a></dd>
             </div>
             <div>
               <dt>Instagram</dt>
-              <dd><a href={instagramUrl} target="_blank" rel="noopener noreferrer" aria-label="ZaSto na Instagramu, otvara se u novom prozoru">@zasto.menu</a></dd>
+              <dd><a href={instagramUrl} target="_blank" rel="noopener noreferrer" aria-label="ZaSto na Instagramu, otvara se u novom prozoru" onClick={() => trackEvent('contact_instagram', { source_section: 'contact', cta_label: '@zasto.menu', destination: 'instagram' })}>@zasto.menu</a></dd>
             </div>
           </dl>
 
           <div className="contact-card__actions">
-            <a className="contact-card__primary" href={`mailto:${email}`}>Pošaljite nam upit <span aria-hidden="true">→</span></a>
-            <a className="contact-card__secondary" href={instagramUrl} target="_blank" rel="noopener noreferrer">Pišite nam na Instagramu <span aria-hidden="true">↗</span></a>
+            <a className="contact-card__primary" href={`mailto:${email}`} onClick={() => trackEvent('contact_email', { source_section: 'contact', cta_label: 'Pošaljite nam upit' })}>Pošaljite nam upit <span aria-hidden="true">→</span></a>
+            <a className="contact-card__secondary" href={instagramUrl} target="_blank" rel="noopener noreferrer" onClick={() => trackEvent('contact_instagram', { source_section: 'contact', cta_label: 'Pišite nam na Instagramu', destination: 'instagram' })}>Pišite nam na Instagramu <span aria-hidden="true">↗</span></a>
           </div>
         </address>
       </div>

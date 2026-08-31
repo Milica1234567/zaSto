@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { trackEvent } from "../../../analytics/analytics";
 import { PhoneMockup } from "../PhoneMockup/PhoneMockup";
 import "./Hero.css";
 
@@ -25,7 +26,7 @@ export function Hero() {
             <a className="landing-hero__primary" href="#contact">
               Zatraži svoj meni <span aria-hidden="true">→</span>
             </a>
-            <Link className="landing-hero__secondary" to="/m/demo">
+            <Link className="landing-hero__secondary" to="/m/demo" onClick={() => trackEvent('view_demo', { source_section: 'hero', cta_label: 'Pogledaj demo', destination: '/m/demo' })}>
               Pogledaj demo
             </Link>
           </div>

@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import { trackEvent } from '../../../analytics/analytics'
 import './Demo.css'
 
 const previewItems = [
@@ -37,14 +38,14 @@ export function Demo() {
         <p>Pravi primer digitalnog menija — sa kategorijama, cenama, alergenima i informacijama o dostupnosti.</p>
       </header>
 
-      <Link className="landing-demo__showcase" to="/m/demo" aria-label="Otvori demo meni Bistro Jutro">
+      <Link className="landing-demo__showcase" to="/m/demo" aria-label="Otvori demo meni Bistro Jutro" onClick={() => trackEvent('view_demo', { source_section: 'demo', cta_label: 'Pogledaj uživo', destination: '/m/demo' })}>
         <span className="landing-demo__orbit landing-demo__orbit--one" aria-hidden="true" />
         <span className="landing-demo__orbit landing-demo__orbit--two" aria-hidden="true" />
         <DemoMenuPreview />
         <span className="landing-demo__hint" aria-hidden="true">Pogledaj uživo <i>↗</i></span>
       </Link>
 
-      <Link className="landing-demo__cta" to="/m/demo">Otvori demo meni <span aria-hidden="true">→</span></Link>
+      <Link className="landing-demo__cta" to="/m/demo" onClick={() => trackEvent('view_demo', { source_section: 'demo', cta_label: 'Otvori demo meni', destination: '/m/demo' })}>Otvori demo meni <span aria-hidden="true">→</span></Link>
     </div>
   </section>
 }

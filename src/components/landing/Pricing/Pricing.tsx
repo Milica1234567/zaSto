@@ -1,4 +1,5 @@
 import './Pricing.css'
+import { trackEvent } from '../../../analytics/analytics'
 
 interface Package {
   name: string
@@ -81,7 +82,7 @@ function PricingCard({ item }: { item: Package }) {
       {item.features.map(feature => <li key={feature}><span aria-hidden="true">✓</span>{feature}</li>)}
     </ul>
 
-    <a className="pricing-card__cta" href="#contact" aria-label={`Želim ${item.name} paket`}>Želim ovaj paket <span aria-hidden="true">→</span></a>
+    <a className="pricing-card__cta" href="#contact" aria-label={`Želim ${item.name} paket`} onClick={() => trackEvent('select_pricing', { source_section: 'pricing', cta_label: 'Želim ovaj paket', package_name: item.name.toUpperCase() })}>Želim ovaj paket <span aria-hidden="true">→</span></a>
   </article>
 }
 
@@ -127,7 +128,7 @@ export function Pricing() {
           <p><span>Izrada digitalnog menija</span><strong>4.900 RSD</strong></p>
           <p><span>Održavanje</span><strong>990 RSD <small>/ mesečno</small></strong></p>
         </div>
-        <a href="#contact">Postanite ZaSto partner <span aria-hidden="true">→</span></a>
+        <a href="#contact" onClick={() => trackEvent('select_pricing', { source_section: 'pricing', cta_label: 'Postanite ZaSto partner', package_name: 'EARLY_PARTNER' })}>Postanite ZaSto partner <span aria-hidden="true">→</span></a>
       </aside>
     </div>
   </section>
