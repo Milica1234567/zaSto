@@ -39,3 +39,8 @@
   .benefit__mobile-copy p { font-size: 1rem; }
   .benefit-phone { align-self: end; width: 15rem; height: 20rem; margin: 0 auto; }
 }
+@media (prefers-color-scheme: dark) {
+  .benefit--mobile { background: var(--zasto-card); }
+  .benefit--mobile .benefit__top, .benefit--mobile h3 { color: var(--zasto-text); }
+  .benefit--mobile p { color: var(--zasto-muted); }
+}

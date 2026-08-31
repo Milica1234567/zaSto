@@ -38,3 +38,11 @@
   .process-step__connector { position: absolute; top: 5.1rem; right: clamp(.5rem, 2vw, 1.5rem); display: block; width: calc(100% - 11rem); height: 1px; background: var(--zasto-border-strong); }
   .process-step__connector i { position: absolute; top: 50%; right: -.15rem; padding-left: .35rem; background: var(--zasto-background-alt); color: var(--zasto-muted); font-size: .78rem; font-style: normal; transform: translateY(-52%); }
 }
+@media (prefers-color-scheme: dark) {
+  .process-step__connector { background: var(--zasto-border); }
+  .process-step__visual { background: transparent; }
+}
+@media (prefers-color-scheme: dark) and (max-width: 47.99rem) {
+  .process-step::before { background: var(--zasto-border); }
+  .process-step__number { border-color: var(--zasto-border); background: var(--zasto-background-alt); }
+}

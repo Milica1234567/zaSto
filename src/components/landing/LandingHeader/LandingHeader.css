@@ -31,7 +31,7 @@
   .landing-header__toggle, .landing-header__mobile-nav { display: none; }
 }
 @media (prefers-color-scheme: dark) {
-  .landing-header__logo { padding: .2rem; border: 1px solid var(--zasto-border); background: #eee7dc; }
+  .landing-header__logo { padding: .2rem; border: 1px solid color-mix(in srgb, var(--zasto-border) 72%, transparent); background: #d9d1c4; }
   .landing-header--scrolled { box-shadow: 0 10px 28px rgba(0, 0, 0, .24); }
   @media (min-width: 58rem) { .landing-header__logo { padding: .28rem .4rem; border-radius: .45rem; } }
 }

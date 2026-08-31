@@ -40,24 +40,24 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --zasto-bg: #201d18;
-    --zasto-background-alt: #252119;
-    --zasto-surface: #29251f;
-    --zasto-card: #2b2720;
-    --zasto-surface-elevated: #332e26;
-    --zasto-footer-bg: #27231c;
-    --zasto-footer-border: #433d33;
+    --zasto-bg: #201f1c;
+    --zasto-background-alt: #252420;
+    --zasto-surface: #292824;
+    --zasto-card: #2d2b26;
+    --zasto-surface-elevated: #33312c;
+    --zasto-footer-bg: #282723;
+    --zasto-footer-border: #444139;
     --zasto-text: #f3eee5;
     --zasto-muted: #c2baae;
     --zasto-accent: #b3573c;
     --zasto-accent-dark: #98472f;
     --zasto-accent-light: #d58b70;
-    --zasto-sage: #3d4a3a;
-    --zasto-border: #433d33;
-    --zasto-border-strong: #5a5143;
-    --zasto-tonal-sage: #2c3529;
-    --zasto-deep: #1c281c;
-    --zasto-deep-strong: #172118;
+    --zasto-sage: #3a4337;
+    --zasto-border: #444139;
+    --zasto-border-strong: #59544a;
+    --zasto-tonal-sage: #2d332a;
+    --zasto-deep: #20281f;
+    --zasto-deep-strong: #1a231b;
     --zasto-on-deep: #f5f0e7;
     --zasto-on-deep-muted: #c8c3b8;
     --zasto-gold: #cfb276;
