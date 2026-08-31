@@ -5,6 +5,10 @@ import App from "./App";
 import "./styles/variables.css";
 import "./styles/globals.css";
 
+if ('scrollRestoration' in window.history) {
+  window.history.scrollRestoration = 'manual'
+}
+
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <BrowserRouter>

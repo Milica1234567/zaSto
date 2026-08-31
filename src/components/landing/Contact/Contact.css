@@ -1,4 +1,4 @@
-.contact { scroll-margin-top: 4rem; padding: clamp(5rem, 10vw, 8rem) 0 3rem; overflow: hidden; background: var(--zasto-deep-strong); color: var(--zasto-on-deep); }
+.contact { scroll-margin-top: var(--landing-anchor-offset); padding: clamp(5rem, 10vw, 8rem) 0 3rem; overflow: hidden; background: var(--zasto-deep-strong); color: var(--zasto-on-deep); }
 .contact__inner { width: min(var(--zasto-container), calc(100% - 2rem)); margin: 0 auto; }
 .contact__layout { display: grid; gap: 2.5rem; }
 .contact__heading { max-width: 39rem; }
@@ -29,7 +29,7 @@
   .contact-card__actions { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 @media (min-width: 48rem) {
-  .contact { scroll-margin-top: 4.8rem; padding-bottom: 4rem; }
+  .contact { padding-bottom: 4rem; }
   .contact__layout { grid-template-columns: minmax(0, 1.05fr) minmax(20rem, .75fr); align-items: start; gap: clamp(3rem, 8vw, 8rem); }
   .contact-card { padding: clamp(2rem, 4vw, 2.75rem); }
   .contact-card::before { left: clamp(2rem, 4vw, 2.75rem); }

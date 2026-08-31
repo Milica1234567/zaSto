@@ -7,6 +7,7 @@ interface MenuNavigationProps { categories: MenuCategory[] }
 export function MenuNavigation({ categories }: MenuNavigationProps) {
   const [activeId, setActiveId] = useState(categories[0]?.id ?? '')
   const linkRefs = useRef(new Map<string, HTMLAnchorElement>())
+  const navigationRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
     const sections = categories
@@ -25,11 +26,17 @@ export function MenuNavigation({ categories }: MenuNavigationProps) {
   }, [categories])
 
   useEffect(() => {
-    linkRefs.current.get(activeId)?.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' })
+    const navigation = navigationRef.current
+    const activeLink = linkRefs.current.get(activeId)
+
+    if (!navigation || !activeLink) return
+
+    const left = activeLink.offsetLeft - (navigation.clientWidth - activeLink.offsetWidth) / 2
+    navigation.scrollTo({ left, behavior: 'smooth' })
   }, [activeId])
 
   return <nav className="menu-navigation" aria-label="Kategorije menija">
-    <div>{categories.map(({ id, name }) => <a
+    <div ref={navigationRef}>{categories.map(({ id, name }) => <a
       key={id}
       href={`#${id}`}
       ref={node => { if (node) linkRefs.current.set(id, node); else linkRefs.current.delete(id) }}

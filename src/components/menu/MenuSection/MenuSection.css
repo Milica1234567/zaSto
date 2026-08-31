@@ -1,4 +1,4 @@
-.menu-section { scroll-margin-top: 5.75rem; padding: 2.5rem 1.25rem 0; }
+.menu-section { scroll-margin-top: var(--menu-navigation-offset, 5rem); padding: 2.5rem 1.25rem 0; }
 .menu-section h2 { margin: 0; color: var(--restaurant-primary); font-size: 1.65rem; }
 .menu-section__description { margin: .4rem 0 .25rem; font-size: .9rem; opacity: .68; }
 @media (min-width: 48rem) { .menu-section { padding-inline: 2rem; } }

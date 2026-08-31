@@ -1,4 +1,4 @@
-.benefits { scroll-margin-top: 4rem; padding: clamp(5rem, 10vw, 8rem) 0; background: var(--zasto-bg); }
+.benefits { scroll-margin-top: var(--landing-anchor-offset); padding: clamp(5rem, 10vw, 8rem) 0; background: var(--zasto-bg); }
 .benefits__inner { width: min(var(--zasto-container), calc(100% - 2rem)); margin: 0 auto; }
 .benefits__heading { max-width: 51rem; }
 .benefits__heading .section-heading__eyebrow { margin: 0 0 1rem; color: var(--zasto-accent-light); font-size: .7rem; font-weight: 850; letter-spacing: .16em; text-transform: uppercase; }
@@ -30,7 +30,6 @@
 .benefit-phone__screen strong { display: block; margin: .35rem 0 1.1rem; color: #873f2d; font-family: var(--font-display); font-size: 1rem; }
 .benefit-phone__screen i { display: block; height: 1.25rem; margin-top: .55rem; border-bottom: 1px solid rgba(41,35,31,.12); }
 @media (min-width: 48rem) {
-  .benefits { scroll-margin-top: 4.8rem; }
   .benefits__layout { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .benefit { min-height: 22rem; padding: clamp(1.75rem, 3vw, 2.5rem); }
   .benefit--mobile { grid-column: 1 / -1; display: grid; min-height: 25rem; padding-bottom: 0; grid-template-columns: minmax(0, 1.2fr) minmax(15rem, .8fr); align-items: center; gap: 2rem; }

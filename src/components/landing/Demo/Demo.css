@@ -1,5 +1,5 @@
 .landing-demo {
-  scroll-margin-top: 4rem;
+  scroll-margin-top: var(--landing-anchor-offset);
   overflow: hidden;
   padding: clamp(5rem, 10vw, 8rem) 0;
   background: var(--zasto-background-alt);
@@ -309,7 +309,6 @@
 }
 @media (min-width: 48rem) {
   .landing-demo {
-    scroll-margin-top: 4.8rem;
   }
   .landing-demo__showcase {
     min-height: 36rem;

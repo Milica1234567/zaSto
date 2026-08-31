@@ -1,4 +1,4 @@
-.how-it-works { scroll-margin-top: 4rem; padding: clamp(5rem, 10vw, 8rem) 0; background: var(--zasto-background-alt); }
+.how-it-works { scroll-margin-top: var(--landing-anchor-offset); padding: clamp(5rem, 10vw, 8rem) 0; background: var(--zasto-background-alt); }
 .how-it-works__inner { width: min(var(--zasto-container), calc(100% - 2rem)); margin: 0 auto; }
 .section-heading__eyebrow { margin: 0 0 1rem; color: var(--zasto-accent-light); font-size: .7rem; font-weight: 850; letter-spacing: .16em; text-transform: uppercase; }
 .section-heading h2 { margin: 0; color: var(--zasto-text); font-family: var(--font-display); font-size: clamp(2.35rem, 9vw, 4.5rem); font-weight: 500; line-height: 1.02; letter-spacing: -.045em; }
@@ -29,7 +29,6 @@
 .process-visual--menu i { position: relative; opacity: .22; }
 .process-visual--menu i::after { position: absolute; top: 0; right: 0; width: .8rem; height: 100%; border-radius: inherit; background: currentColor; content: ''; opacity: 1; }
 @media (min-width: 48rem) {
-  .how-it-works { scroll-margin-top: 4.8rem; }
   .process-flow { grid-template-columns: repeat(3, minmax(0, 1fr)); margin-top: 5rem; }
   .process-step { display: block; padding: 0 clamp(1rem, 3vw, 2.25rem) 0 0; }
   .process-step::before { display: none; }
