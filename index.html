@@ -1,11 +1,66 @@
 <!doctype html>
-<html lang="sr">
+<html lang="sr-Latn">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="ZaSto — digitalni meni za vaš restoran." />
+    <meta name="description" content="ZaSto izrađuje digitalne QR menije za restorane, kafiće i druge ugostiteljske objekte — bez aplikacije, bez ponovne štampe i prilagođeno telefonu." />
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#f8f5ef" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#201f1c" media="(prefers-color-scheme: dark)" />
+    <link rel="canonical" href="https://zasto.rs/" />
     <link rel="icon" type="image/png" href="/favicon.png" />
-    <title>ZaSto | Digitalni meni za restorane</title>
+    <link rel="apple-touch-icon" href="/favicon.png" />
+
+    <meta property="og:title" content="ZaSto | Digitalni meni za restorane i kafiće" />
+    <meta property="og:description" content="Digitalni QR meni prilagođen vašem lokalu i telefonu vaših gostiju — bez aplikacije i ponovne štampe." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://zasto.rs/" />
+    <meta property="og:image" content="https://zasto.rs/favicon.png" />
+    <meta property="og:image:alt" content="ZaSto logo" />
+    <meta property="og:image:width" content="1280" />
+    <meta property="og:image:height" content="1280" />
+    <meta property="og:locale" content="sr_RS" />
+
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="ZaSto | Digitalni meni za restorane i kafiće" />
+    <meta name="twitter:description" content="Digitalni QR meni prilagođen vašem lokalu i telefonu vaših gostiju — bez aplikacije i ponovne štampe." />
+    <meta name="twitter:image" content="https://zasto.rs/favicon.png" />
+    <meta name="twitter:image:alt" content="ZaSto logo" />
+
+    <title>ZaSto | Digitalni meni za restorane i kafiće</title>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Organization",
+            "@id": "https://zasto.rs/#organization",
+            "name": "ZaSto",
+            "url": "https://zasto.rs/",
+            "email": "mailto:zastomenu@gmail.com",
+            "logo": "https://zasto.rs/favicon.png",
+            "sameAs": ["https://www.instagram.com/zasto.menu/"]
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://zasto.rs/#website",
+            "url": "https://zasto.rs/",
+            "name": "ZaSto",
+            "inLanguage": "sr-Latn",
+            "publisher": { "@id": "https://zasto.rs/#organization" }
+          },
+          {
+            "@type": "Service",
+            "@id": "https://zasto.rs/#service",
+            "name": "ZaSto digitalni QR meni",
+            "serviceType": "Izrada i održavanje digitalnih QR menija za ugostiteljske objekte",
+            "description": "ZaSto izrađuje i održava mobilne digitalne QR menije za restorane, kafiće i druge ugostiteljske objekte.",
+            "provider": { "@id": "https://zasto.rs/#organization" },
+            "areaServed": { "@type": "Country", "name": "Serbia" }
+          }
+        ]
+      }
+    </script>
     <script>
       ;(function (location) {
         if (location.search[1] === '/') {
@@ -22,6 +77,12 @@
             '',
             location.pathname.slice(0, -1) + restoredRoute + location.hash,
           )
+        }
+
+        if (location.pathname.startsWith('/m/')) {
+          document.title = 'Digitalni meni | ZaSto'
+          document.querySelector('meta[name="robots"]').setAttribute('content', 'noindex, follow')
+          document.querySelector('link[rel="canonical"]').setAttribute('href', 'https://zasto.rs' + location.pathname)
         }
       })(window.location)
     </script>

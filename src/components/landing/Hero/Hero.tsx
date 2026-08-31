@@ -17,7 +17,7 @@ export function Hero() {
             <em>Jedan sken daleko.</em>
           </h1>
           <p className="landing-hero__intro">
-            Digitalni meni koji vaši gosti otvaraju odmah
+            Digitalni meni za restorane i kafiće koji gosti otvaraju odmah
             <br />
             bez aplikacije, bez PDF-a i bez komplikacija.
           </p>

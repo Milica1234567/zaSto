@@ -37,8 +37,8 @@ export function LandingHeader() {
   return <header className={`landing-header${scrolled ? ' landing-header--scrolled' : ''}`}>
     <div className="landing-header__inner">
       <Link className="landing-header__logo" to="/" aria-label="ZaSto početna" onClick={closeMenu}>
-        <img className="landing-header__logo-small" src={smallLogo} alt="ZaSto" />
-        <img className="landing-header__logo-full" src={logo} alt="" />
+        <img className="landing-header__logo-small" src={smallLogo} width="1280" height="1280" alt="ZaSto" />
+        <img className="landing-header__logo-full" src={logo} width="2172" height="724" alt="" />
       </Link>
 
       <nav className="landing-header__desktop-nav" aria-label="Glavna navigacija">
