@@ -1,7 +1,7 @@
 .menu-item { display: flex; gap: 1rem; padding: 1.25rem 0; border-bottom: 1px solid color-mix(in srgb, var(--restaurant-text) 12%, transparent); }
 .menu-item__content { flex: 1; min-width: 0; }
 .menu-item__title { display: flex; align-items: baseline; justify-content: space-between; gap: 1rem; }
-.menu-item h3 { margin: 0; font-size: 1.05rem; }
+.menu-item h3 { margin: 0; font-family: var(--restaurant-font-heading); font-size: 1.05rem; }
 .menu-item strong { flex: 0 0 auto; color: var(--restaurant-primary); }
 .menu-item p { margin: .35rem 0 0; font-size: .9rem; opacity: .7; }
 .menu-item__tags { display: flex; flex-wrap: wrap; gap: .35rem; margin: .65rem 0 0; padding: 0; list-style: none; }

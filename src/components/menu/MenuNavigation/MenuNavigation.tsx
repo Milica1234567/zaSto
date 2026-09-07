@@ -2,10 +2,10 @@ import { useEffect, useRef, useState } from 'react'
 import type { MenuCategory } from '../../../types/menu'
 import './MenuNavigation.css'
 
-interface MenuNavigationProps { categories: MenuCategory[] }
+interface MenuNavigationProps { categories: MenuCategory[]; allLabel?: string }
 
-export function MenuNavigation({ categories }: MenuNavigationProps) {
-  const [activeId, setActiveId] = useState(categories[0]?.id ?? '')
+export function MenuNavigation({ categories, allLabel }: MenuNavigationProps) {
+  const [activeId, setActiveId] = useState(allLabel ? 'menu-top' : (categories[0]?.id ?? ''))
   const linkRefs = useRef(new Map<string, HTMLAnchorElement>())
   const navigationRef = useRef<HTMLDivElement>(null)
 
@@ -36,7 +36,15 @@ export function MenuNavigation({ categories }: MenuNavigationProps) {
   }, [activeId])
 
   return <nav className="menu-navigation" aria-label="Kategorije menija">
-    <div ref={navigationRef}>{categories.map(({ id, name }) => <a
+    <div ref={navigationRef}>
+      {allLabel && <a
+        href="#menu-top"
+        ref={node => { if (node) linkRefs.current.set('menu-top', node); else linkRefs.current.delete('menu-top') }}
+        className={activeId === 'menu-top' ? 'is-active' : undefined}
+        aria-current={activeId === 'menu-top' ? 'location' : undefined}
+        onClick={() => setActiveId('menu-top')}
+      >{allLabel}</a>}
+      {categories.map(({ id, name }) => <a
       key={id}
       href={`#${id}`}
       ref={node => { if (node) linkRefs.current.set(id, node); else linkRefs.current.delete(id) }}

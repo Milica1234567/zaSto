@@ -20,12 +20,15 @@ export function MenuPage() {
     '--restaurant-background': restaurant.theme.backgroundColor,
     '--restaurant-text': restaurant.theme.textColor,
     '--restaurant-accent': restaurant.theme.accentColor,
+    '--restaurant-font-heading': restaurant.theme.headingFontFamily ?? 'inherit',
+    '--restaurant-font-body': restaurant.theme.bodyFontFamily ?? 'inherit',
+    '--restaurant-content-width': restaurant.theme.contentWidth ?? '50rem',
   }
 
   return <div className="menu-page" style={style}>
-    <MenuHeader name={restaurant.name} description={restaurant.description} logo={restaurant.logo} address={restaurant.address} instagram={restaurant.instagram} />
-    <MenuNavigation key={restaurant.slug} categories={restaurant.categories} />
+    <MenuHeader name={restaurant.name} subtitle={restaurant.subtitle} tagline={restaurant.tagline} description={restaurant.description} logo={restaurant.logo} decoration={restaurant.headerDecoration} address={restaurant.address} instagram={restaurant.instagram} />
+    <MenuNavigation key={restaurant.slug} categories={restaurant.categories} allLabel={restaurant.allCategoryLabel} />
     <main className="menu-page__content">{restaurant.categories.map(category => <MenuSection key={category.id} category={category} currency={restaurant.currency} />)}</main>
-    <MenuAttribution />
+    <MenuAttribution restaurantName={restaurant.name} tagline={restaurant.tagline} />
   </div>
 }

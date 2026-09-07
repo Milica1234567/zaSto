@@ -3,6 +3,9 @@ export interface RestaurantTheme {
   backgroundColor: string
   textColor: string
   accentColor: string
+  headingFontFamily?: string
+  bodyFontFamily?: string
+  contentWidth?: string
 }
 
 export type MenuItemTag =
@@ -12,6 +15,7 @@ export type MenuItemTag =
   | 'Vegetarijansko'
   | 'Ljuto'
   | "Chef's choice"
+  | 'Preporuka kuće'
 
 export type Allergen =
   | 'gluten'
@@ -34,11 +38,18 @@ export interface MenuItemData {
   available?: boolean
 }
 
+export interface MenuDecoration {
+  image: string
+  align?: 'left' | 'center' | 'right'
+  size?: 'small' | 'medium' | 'large'
+}
+
 export interface MenuCategory {
   id: string
   name: string
   description?: string
   items: MenuItemData[]
+  decoration?: MenuDecoration
 }
 
 export interface Restaurant {
@@ -46,6 +57,10 @@ export interface Restaurant {
   name: string
   logo?: string
   description: string
+  subtitle?: string
+  tagline?: string
+  allCategoryLabel?: string
+  headerDecoration?: string
   address?: string
   instagram?: string
   wifi?: string

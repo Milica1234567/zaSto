@@ -1,4 +1,11 @@
-.menu-section { scroll-margin-top: var(--menu-navigation-offset, 5rem); padding: 2.5rem 1.25rem 0; }
-.menu-section h2 { margin: 0; color: var(--restaurant-primary); font-size: 1.65rem; }
+.menu-section { scroll-margin-top: var(--menu-navigation-offset, 5rem); overflow: clip; padding: 2.5rem 1.25rem 0; }
+.menu-section h2 { margin: 0; color: var(--restaurant-primary); font-family: var(--restaurant-font-heading); font-size: 1.65rem; }
 .menu-section__description { margin: .4rem 0 .25rem; font-size: .9rem; opacity: .68; }
+.menu-section__decoration { display: flex; height: 5rem; margin: 1rem 0 -.5rem; align-items: center; opacity: .2; pointer-events: none; }
+.menu-section__decoration img { width: auto; max-width: 100%; height: 100%; object-fit: contain; }
+.menu-section__decoration--small { height: 3.75rem; opacity: .16; }
+.menu-section__decoration--large { height: 7rem; }
+.menu-section__decoration--left { justify-content: flex-start; }
+.menu-section__decoration--center { justify-content: center; }
+.menu-section__decoration--right { justify-content: flex-end; transform: translateX(1rem); }
 @media (min-width: 48rem) { .menu-section { padding-inline: 2rem; } }
