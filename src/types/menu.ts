@@ -4,8 +4,13 @@ export interface RestaurantTheme {
   textColor: string
   accentColor: string
   headingFontFamily?: string
+  brandFontFamily?: string
+  brandFontWeight?: string
   bodyFontFamily?: string
   contentWidth?: string
+  headerPadding?: string
+  frameColor?: string
+  navigationStyle?: 'pill' | 'underline'
 }
 
 export type MenuItemTag =
@@ -59,6 +64,8 @@ export interface Restaurant {
   description: string
   subtitle?: string
   tagline?: string
+  menuLabel?: string
+  footerDescriptor?: string
   allCategoryLabel?: string
   headerDecoration?: string
   address?: string

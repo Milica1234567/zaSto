@@ -1,10 +1,10 @@
-.menu-header { position: relative; overflow: clip; padding: 3rem 1.25rem 2rem; text-align: center; }
+.menu-header { position: relative; overflow: clip; padding: var(--restaurant-header-padding); text-align: center; }
 .menu-header > :not(.menu-header__decoration) { position: relative; z-index: 1; }
 .menu-header__decoration { position: absolute; top: .5rem; right: -2.25rem; width: 8rem; height: 8rem; object-fit: contain; opacity: .16; pointer-events: none; }
 .menu-header__logo { width: 5rem; height: 5rem; margin: 0 auto 1rem; object-fit: contain; }
 @media (min-width: 48rem) { .menu-header__decoration { right: max(1rem, calc(50% - 24rem)); width: 10rem; height: 10rem; } }
 .menu-header__eyebrow { margin-bottom: .4rem; color: var(--restaurant-primary); font-size: .75rem; font-weight: 800; letter-spacing: .18em; text-transform: uppercase; }
-.menu-header h1 { margin: 0; color: var(--restaurant-primary); font-family: var(--restaurant-font-heading); font-size: clamp(2.25rem, 10vw, 4.5rem); line-height: 1; }
+.menu-header h1 { margin: 0; color: var(--restaurant-primary); font-family: var(--restaurant-font-brand); font-size: clamp(2.25rem, 10vw, 4.5rem); font-weight: var(--restaurant-brand-weight); line-height: 1; }
 .menu-header__subtitle { margin: .6rem 0 0; color: var(--restaurant-primary); font-family: var(--restaurant-font-heading); font-size: clamp(1rem, 4vw, 1.25rem); letter-spacing: .04em; }
 .menu-header__tagline { margin: .8rem auto 0; font-family: var(--restaurant-font-heading); font-size: 1rem; font-style: italic; opacity: .82; }
 .menu-header__description { max-width: 36rem; margin: 1rem auto 0; opacity: .78; }

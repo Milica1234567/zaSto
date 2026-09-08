@@ -1,7 +1,13 @@
 .menu-page { --menu-navigation-offset: 5rem; min-height: 100svh; background: var(--restaurant-background); color: var(--restaurant-text); font-family: var(--restaurant-font-body); }
+.menu-page--framed::before { position: fixed; inset: .3rem; z-index: 100; border: 1px solid var(--restaurant-frame); content: ''; opacity: .45; pointer-events: none; }
+.menu-page--nav-underline .menu-navigation a { border-bottom: 1px solid transparent; border-radius: 0; background: transparent; color: var(--restaurant-text); font-family: var(--restaurant-font-heading); font-size: .72rem; font-weight: 600; letter-spacing: .12em; }
+.menu-page--nav-underline .menu-navigation a:hover,
+.menu-page--nav-underline .menu-navigation a:focus-visible,
+.menu-page--nav-underline .menu-navigation a.is-active { border-bottom-color: var(--restaurant-accent); background: transparent; color: var(--restaurant-primary); }
 .menu-page__content { width: min(var(--restaurant-content-width), 100%); margin: 0 auto; padding-bottom: 4rem; }
 .menu-not-found { display: grid; min-height: 100svh; place-items: center; padding: 1.5rem; background: var(--color-surface); text-align: center; }
 .menu-not-found div { max-width: 30rem; }
 .menu-not-found div > p:first-child { color: var(--color-brand); font-weight: 800; letter-spacing: .15em; text-transform: uppercase; }
 .menu-not-found h1 { color: var(--color-heading); }
 .menu-not-found a { display: inline-block; margin-top: 1rem; color: var(--color-brand); font-weight: 700; }
+@media (min-width: 48rem) { .menu-page--framed::before { inset: .9rem; } }
