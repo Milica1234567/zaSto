@@ -21,6 +21,7 @@ export type MenuItemTag =
   | 'Ljuto'
   | "Chef's choice"
   | 'Preporuka kuće'
+  | 'Forno izbor'
 
 export type Allergen =
   | 'gluten'
